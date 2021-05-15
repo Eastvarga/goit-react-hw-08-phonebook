@@ -5,13 +5,13 @@ const useStyles = createUseStyles({
   container: {
     display: 'flex',
     width: '20%',
+    minWidth: '200px',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   link: {
     color: 'black',
     textDecoration: 'none',
-    marginRight: '20px',
     padding: '4px 6px',
   },
   activeLink: {
