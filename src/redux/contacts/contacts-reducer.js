@@ -43,6 +43,9 @@ const loading = createReducer(false, {
 });
 
 const error = createReducer(null, {
+  [addContactSuccess]: () => null,
+  [deleteContactSuccess]: () => null,
+  [fetchContactSuccess]: () => null,
   [addContactError]: (state, { payload }) => payload,
   [deleteContactError]: (state, { payload }) => payload,
   [fetchContactError]: (state, { payload }) => payload,

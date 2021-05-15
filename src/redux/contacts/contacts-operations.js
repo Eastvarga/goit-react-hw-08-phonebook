@@ -1,6 +1,6 @@
 import axios from 'axios';
 import actions from './contacts-action';
-axios.defaults.baseURL = 'http://localhost:4040';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 
 const {
   addContactRequest,
@@ -22,7 +22,7 @@ const addContact = ({ name, number }) => dispatch => {
   axios
     .post('/contacts', contact)
     .then(({ data }) => dispatch(addContactSuccess(data)))
-    .catch(error => dispatch(addContactError(error)));
+    .catch(error => dispatch(addContactError(error.message)));
 };
 
 const deleteContact = id => dispatch => {
@@ -31,7 +31,7 @@ const deleteContact = id => dispatch => {
   axios
     .delete(`/contacts/${id}`)
     .then(() => dispatch(deleteContactSuccess(Number(id))))
-    .catch(error => dispatch(deleteContactError(error)));
+    .catch(error => dispatch(deleteContactError(error.message)));
 };
 
 //async method wariant
@@ -43,7 +43,7 @@ const fetchContacts = () => async dispatch => {
 
     dispatch(fetchContactSuccess(data));
   } catch (error) {
-    dispatch(fetchContactError(error));
+    dispatch(fetchContactError(error.message));
   }
 
   // axios

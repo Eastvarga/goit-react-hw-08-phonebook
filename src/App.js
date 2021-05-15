@@ -1,32 +1,33 @@
-import Form from './components/Form';
-import ContactList from './components/ContactList';
-import FindInput from './components/FindInput';
+import { Switch, Route } from 'react-router-dom';
+import PhoneBook from './components/PhoneBook';
+import AppBar from './components/AppBar';
+import HomeView from './components/HomeView';
+import RegisterView from './components/RegisterView';
+import LoginView from './components/LoginView';
 import { connect } from 'react-redux';
-import { contactsSelectors } from './redux/contacts';
-import './styles.css';
+import { authOperations } from './redux/auth';
+import { useEffect } from 'react';
 
-function App({ isLoadingContacts, errorContacts }) {
-  // console.dir(errorContacts);
+function App({ onGetCurrentUser }) {
+  useEffect(() => {
+    onGetCurrentUser();
+  }, []);
   return (
-    <div className="container">
-      <h1 className="main_title">Phonebook</h1>
-      <Form />
-      <h2 className="sub_title">Contacts</h2>
-      {isLoadingContacts && <h1>Loading...</h1>}
-      {errorContacts && (
-        <div className="error">
-          <h1>{errorContacts.name}</h1>
-          <p>{errorContacts.message}</p>
-          <p>{errorContacts.stack}</p>
-        </div>
-      )}
-      <FindInput />
-      <ContactList />
-    </div>
+    <>
+      <AppBar />
+
+      <Switch>
+        <Route exact path="/" component={HomeView} />
+        <Route path="/register" component={RegisterView} />
+        <Route path="/login" component={LoginView} />
+        <Route path="/phonebook" component={PhoneBook} />
+      </Switch>
+    </>
   );
 }
-const mapStateToProps = state => ({
-  isLoadingContacts: contactsSelectors.getLoadingContacts(state),
-  errorContacts: contactsSelectors.getError(state),
-});
-export default connect(mapStateToProps)(App);
+
+const mapDispatchToProps = {
+  onGetCurrentUser: authOperations.getCurrentUser,
+};
+
+export default connect(null, mapDispatchToProps)(App);
