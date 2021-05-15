@@ -17,6 +17,10 @@ const useStyles = createUseStyles({
     fontWeight: '700',
     marginRight: '12px',
   },
+  button: {
+    backgroundColor: 'aqua',
+    padding: '6px 8px',
+  },
 });
 
 const UserMenu = ({ avatar, name, onLogout }) => {
@@ -25,7 +29,7 @@ const UserMenu = ({ avatar, name, onLogout }) => {
     <div className={classes.container}>
       <img src={avatar} className={classes.avatar} alt="avatar" width="32" />
       <span className={classes.name}>Welcome, {name}</span>
-      <button type="button" onClick={onLogout}>
+      <button className={classes.button} type="button" onClick={onLogout}>
         Logout
       </button>
     </div>

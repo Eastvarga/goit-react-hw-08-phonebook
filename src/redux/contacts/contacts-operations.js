@@ -25,13 +25,16 @@ const addContact = ({ name, number }) => dispatch => {
     .catch(error => dispatch(addContactError(error.message)));
 };
 
-const deleteContact = id => dispatch => {
+const deleteContact = id => async dispatch => {
   dispatch(deleteContactRequest());
 
-  axios
-    .delete(`/contacts/${id}`)
-    .then(() => dispatch(deleteContactSuccess(Number(id))))
-    .catch(error => dispatch(deleteContactError(error.message)));
+  try {
+    const response = axios.delete(`/contacts/${id}`);
+    // console.log(response.data);
+    dispatch(deleteContactSuccess(id));
+  } catch (error) {
+    dispatch(deleteContactError(error.message));
+  }
 };
 
 //async method wariant

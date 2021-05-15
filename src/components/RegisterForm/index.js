@@ -21,9 +21,9 @@ const useStyles = createUseStyles({
 const RegisterForm = ({ onRegister, onLogin, loginToggle }) => {
   //   const register = loginToggle === 'true' ? false : true;
   const classes = useStyles();
-  const [email, setEmail] = useState('dodo@dodo.com');
-  const [name, setName] = useState('Dododo');
-  const [password, setPassword] = useState('12345678');
+  const [email, setEmail] = useState(''); //dodo@dodo.com
+  const [name, setName] = useState(''); //Dododo
+  const [password, setPassword] = useState(''); //12345678
 
   const handleChangeEmail = e => setEmail(e.target.value);
   const handleChangeName = e => setName(e.target.value);

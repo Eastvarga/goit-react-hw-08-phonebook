@@ -10,8 +10,7 @@ const useStyles = createUseStyles({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: '20px',
-    paddingBottom: '20px',
+    padding: '20px 20px',
     borderBottom: '1px solid #2A3638',
   },
 });
