@@ -1,0 +1,31 @@
+{
+  "files": {
+    "HomeView.js": "/goit-react-hw-08-phonebook/static/js/HomeView.b33b154a.chunk.js",
+    "HomeView.js.map": "/goit-react-hw-08-phonebook/static/js/HomeView.b33b154a.chunk.js.map",
+    "LoginView.js": "/goit-react-hw-08-phonebook/static/js/LoginView.144831b6.chunk.js",
+    "LoginView.js.map": "/goit-react-hw-08-phonebook/static/js/LoginView.144831b6.chunk.js.map",
+    "PhoneBook.css": "/goit-react-hw-08-phonebook/static/css/PhoneBook.086a8746.chunk.css",
+    "PhoneBook.js": "/goit-react-hw-08-phonebook/static/js/PhoneBook.2a1abd3f.chunk.js",
+    "PhoneBook.js.map": "/goit-react-hw-08-phonebook/static/js/PhoneBook.2a1abd3f.chunk.js.map",
+    "RegisterView.js": "/goit-react-hw-08-phonebook/static/js/RegisterView.b32ec887.chunk.js",
+    "RegisterView.js.map": "/goit-react-hw-08-phonebook/static/js/RegisterView.b32ec887.chunk.js.map",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.62dabc99.chunk.js",
+    "main.js.map": "/goit-react-hw-08-phonebook/static/js/main.62dabc99.chunk.js.map",
+    "runtime-main.js": "/goit-react-hw-08-phonebook/static/js/runtime-main.a4ea9d80.js",
+    "runtime-main.js.map": "/goit-react-hw-08-phonebook/static/js/runtime-main.a4ea9d80.js.map",
+    "static/css/6.de71bbd8.chunk.css": "/goit-react-hw-08-phonebook/static/css/6.de71bbd8.chunk.css",
+    "static/js/6.1a6ea5ff.chunk.js": "/goit-react-hw-08-phonebook/static/js/6.1a6ea5ff.chunk.js",
+    "static/js/6.1a6ea5ff.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/6.1a6ea5ff.chunk.js.map",
+    "index.html": "/goit-react-hw-08-phonebook/index.html",
+    "static/css/6.de71bbd8.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/6.de71bbd8.chunk.css.map",
+    "static/css/PhoneBook.086a8746.chunk.css.map": "/goit-react-hw-08-phonebook/static/css/PhoneBook.086a8746.chunk.css.map",
+    "static/js/6.1a6ea5ff.chunk.js.LICENSE.txt": "/goit-react-hw-08-phonebook/static/js/6.1a6ea5ff.chunk.js.LICENSE.txt",
+    "static/media/default-avatar.057d3846.png": "/goit-react-hw-08-phonebook/static/media/default-avatar.057d3846.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a4ea9d80.js",
+    "static/css/6.de71bbd8.chunk.css",
+    "static/js/6.1a6ea5ff.chunk.js",
+    "static/js/main.62dabc99.chunk.js"
+  ]
+}
