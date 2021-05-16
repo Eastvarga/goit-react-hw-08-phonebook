@@ -1,4 +1,4 @@
-import { Switch } from 'react-router-dom';
+import { Switch, Redirect } from 'react-router-dom';
 // import PhoneBook from './components/PhoneBook';
 import AppBar from './components/AppBar';
 // import HomeView from './components/HomeView';
@@ -8,7 +8,7 @@ import Container from './components/Container';
 import { connect } from 'react-redux';
 import { authOperations } from './redux/auth';
 import { useEffect, Suspense, lazy } from 'react';
-import PrivateRoute from './components/PrivateRout';
+import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
 
 const HomeView = lazy(() =>
@@ -35,12 +35,14 @@ function App({ onGetCurrentUser }) {
         <Switch>
           <PublicRoute exact path="/" component={HomeView} />
           <PublicRoute
+           
             path="/register"
             restricted
             redirectTo="/phonebook"
             component={RegisterView}
           />
           <PublicRoute
+           
             path="/login"
             restricted
             redirectTo="/phonebook"
@@ -48,9 +50,10 @@ function App({ onGetCurrentUser }) {
           />
           <PrivateRoute
             path="/phonebook"
+            redirectTo="/"
             component={PhoneBook}
-            redirectTo="/login"
           />
+          <Redirect to="/" />
         </Switch>
       </Suspense>
     </Container>
